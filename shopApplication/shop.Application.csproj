@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Product\CreateProduct.cs" />
+    <ProjectReference Include="..\..\shopDomain\shop.Domain.csproj" />
+    <ProjectReference Include="..\Shob.Db\Shop.Db.csproj" />
   </ItemGroup>
 
 </Project>
