@@ -1,0 +1,12 @@
+﻿Le 10-JUIN-2020
+c:\GitBash2019-2020\shop2020vuesdonetcore\Shob.Db>dotnet ef migrations add init
+Unable to create an object of type 'ApplicationDbContext'. Add an implementation of 'IDesignTimeDbContextFactory<ApplicationDbContext>' to the project, or see https://go.microsoft.com/fwlink/?linkid=851728 for additional patterns supported at design time.
+
+c:\GitBash2019-2020\shop2020vuesdonetcore\Shob.Db> :  This says i have DbContext but i have no configuration, so it is no leading anwhere
+solution: is add a flag in the migration command to specify the startup project
+
+=======================
+o database provider has been configured for this DbContext. A provider can be configured by overriding the DbContext.OnConfiguring method or by using AddDbContext on the application service provider. If AddDbContext is used, then also ensure that your DbContext type accepts a DbContextOptions<TContext> object in its constructor and passes it to the base constructor for DbContext.
+PM> Add-Migration InitialCreate
+Could not load assembly 'shopUI'. Ensure it is referenced by the startup project 'Shop.Db'.
+PM> 

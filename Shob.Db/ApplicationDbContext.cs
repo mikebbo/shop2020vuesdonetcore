@@ -4,14 +4,18 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Shob.Db;
 
-namespace Shob.Db
+
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+
+namespace Shop.Db
 {
-    class ApplicationDbContext: IdentityDbContext
+   public class ApplicationDbContext: IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
         {
         }
-        public Dbset<Product> Myproperty { get; set; }
+        public DbSet<Product> Myproperty { get; set; }
     }
 }
